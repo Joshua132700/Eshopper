@@ -1,6 +1,6 @@
 <?php
   $BDProductos = array( 
-    array(1, 2, 3, 4, 5),                                       //El ID
+    array(1, 2, 3, 4, 5,6,7),                                       //El ID
     array("Blusa", "Lentes", "Playera", "Pantalón", "Vestido","Playera Roja", "Calcetines"), //La Descripción
     array(100, 350, 200, 420, 250, 170, 60),                             //El Precio
     array("Dama", "Caballero", "Caballero", "Dama", "Dama", "Caballero", "Caballero"));   //Categoría
