@@ -30,7 +30,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Software Punto de Venta" content="">
-    <meta name="Joshua Armando" content="">
+    <meta name="Alden Ibarra" content="">
     <title>Inicio | E-Shopper</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@
 					</div>
 					<H3>SOFTWARE PUNTO DE VENTA </H3>
 					<div class="col-sm-8">
-						Por: Alden Ibarra
+						Por: Joshua Armando
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="agregarproductos.php" target="_blank"><i class="fa fa-plus"></i>Agregar</a></li>
@@ -206,15 +206,15 @@
 											$precioB = $BDProductos[$n+2];
 											?>
 											<img src="images/home/<?php echo $img; ?>.jpg" width="210" height="180" alt="" />
-											<h2><?php echo $precioB;?></h2>
-											<p><?php echo $productoB;?></p>
-											<a href=cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?> /i>Agregar al Carrito</a>
-											<h2><?php echo $precioB; ?></h2>
-											<p><?php echo $productoB; ?></p>
+											<h2><?php echo $productoB; ?></h2>
+											<p><?php echo $precioB; ?></p>
+											<a href="cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
+											<h2><?php echo $productoB; ?></h2>
+											<p><?php echo $precioB; ?></p>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<a href=cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>></i>Agregar al Carrito</a>
+												<a href="cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 											</div>
 										</div>
 								</div>								
