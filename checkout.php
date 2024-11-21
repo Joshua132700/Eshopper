@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -182,6 +182,14 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php 
+   if(file_exists('carritocompras.txt')){
+      $content = trim(file_get_contents('carritocompras.txt'), PHP_EOL);
+      $lineas = explode(PHP_EOL, $content);
+      foreach($lineas as $linea){
+         list($productoE, $precioE) = explode(',', $linea);
+?>
+
 						<tr>
 							<td class="cart_product">
 								<a href=""><img src="images/cart/one.png" alt=""></a>
