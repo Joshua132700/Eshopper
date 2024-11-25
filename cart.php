@@ -1,5 +1,4 @@
-	<?php
-
+<?php
    if (isset($_GET['producto'])){
       $producto = $_GET['producto'];
       $precio = $_GET['precio']; 
@@ -11,7 +10,7 @@
       $precio = "";
    } 
 ?>
-
+;
 
 <!DOCTYPE html>
 <html lang="es">
@@ -142,9 +141,9 @@
   if(file_exists('carritocompras.txt')){
     $content = trim(file_get_contents('carritocompras.txt'), PHP_EOL);
     $lineas = explode(PHP_EOL, $content);
+    $total=0;
     foreach($lineas as $linea){
       list($productoE, $precioE) = explode(',', $linea);
-         
      ?>
 						<tr>
 							<td class="cart_product">
@@ -171,10 +170,11 @@
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
-						<?php 
+						<?php
+							$total = $total + $precioE;
+						}
 					}
-				}
-					?>
+							?>	
 					</tbody>
 				</table>
 			</div>
@@ -190,13 +190,13 @@
 				<div class="col-sm-6">
 					<div class="total_area">
 						<ul>
-							<li>Sub Total del carrito<span>$59</span></li>
-							<li>Impuestos <span>$2</span></li>
+							<li>Sub Total del carrito<span><?php echo $total; ?></span></li>
+							<li>Impuestos <span><?php echo $total * .16;?></span></li>
 							<li>Precio de envio<span>Free</span></li>
-							<li>Total <span>$61</span></li>
+							<li>Total <span><?php echo $total + ($total * .16);?></span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Actualizar</a>
-							<a class="btn btn-default check_out" href="Vaciarcarrito.php">Vaciar Carrito</a>
+							<a class="btn btn-default check_out" href="Vaciarcarrito.php" target="_blank">Vaciar Carrito</a>
 					</div>
 				</div>
 			</div>
